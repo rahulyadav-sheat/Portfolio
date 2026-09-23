@@ -1,0 +1,91 @@
+/* ===== HERO — the first screen of the portfolio ===== */
+
+.hero {
+  padding: 150px 0 100px;
+  background-color: var(--paper);
+  /* blueprint-style grid lines */
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 32px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-greeting {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+
+.hero-title {
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-weight: 500;
+  color: var(--muted);
+  margin: 18px 0 20px;
+}
+
+.hero-tagline {
+  max-width: 46ch;
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-photo {
+  position: relative;
+  justify-self: center;
+  width: min(330px, 100%);
+}
+
+/* yellow block behind the photo */
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  background: var(--marker);
+  border-radius: var(--radius);
+}
+
+.hero-photo img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--blue-soft);
+}
+
+@media (max-width: 800px) {
+  .hero {
+    padding: 110px 0 72px;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-photo {
+    order: -1; /* photo on top on mobile */
+    width: min(230px, 70%);
+  }
+}

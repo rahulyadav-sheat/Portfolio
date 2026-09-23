@@ -1,0 +1,236 @@
+/* =========================================================
+   GLOBAL STYLES — used by every part of the portfolio
+   (colours, fonts, buttons, forms, layout helpers)
+   ========================================================= */
+
+:root {
+  --paper: #fbfcfe;
+  --ink: #14213d;
+  --muted: #5b6478;
+  --blue: #2b59c3;
+  --blue-dark: #1f4396;
+  --blue-soft: #e8eefb;
+  --grid: #e3e9f5;
+  --marker: #ffc933;
+  --border: #dde3ee;
+  --white: #ffffff;
+  --danger: #c93a3a;
+  --success: #1f8a5b;
+
+  --font-heading: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --font-body: "Figtree", "Segoe UI", Arial, sans-serif;
+
+  --radius: 10px;
+  --shadow: 0 6px 24px rgba(20, 33, 61, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px; /* so the fixed navbar doesn't hide section titles */
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: min(1100px, 100% - 40px);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 88px 0;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: 44px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 2px solid var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.btn-small {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-width: 1.5px;
+}
+
+/* ---------- Forms (contact form + admin panel) ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--white);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.form-success {
+  color: var(--success);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.form-error {
+  color: var(--danger);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ---------- Loading and error screens ---------- */
+.loading,
+.error-box {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.error-box {
+  color: var(--danger);
+}
+
+/* ---------- Accessibility ---------- */
+:focus-visible {
+  outline: 3px solid var(--marker);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
