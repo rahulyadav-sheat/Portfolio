@@ -32,28 +32,28 @@ function About() {
 
           <li>
             <span className="fact-label">Email</span>
-            <a href="mailto:aman@example.com">aman@example.com</a>
+            <a href="mailto:rahulbsb111@gmail.com">rahulbsb111@gmail.com</a>
           </li>
 
           <li>
             <span className="fact-label">GitHub</span>
             <a
-              href="https://github.com/"
+              href="https://github.com/rahulyadav-sheat"
               target="_blank"
               rel="noreferrer"
             >
-              github.com/amanverma
+              github.com/Rahul-yadav
             </a>
           </li>
 
           <li>
             <span className="fact-label">LinkedIn</span>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/rahul-yadav-0142a1342/?isSelfProfile=true"
               target="_blank"
               rel="noreferrer"
             >
-              linkedin.com/in/amanverma
+              linkedin.com/in/Rahul-yadav
             </a>
           </li>
         </ul>
