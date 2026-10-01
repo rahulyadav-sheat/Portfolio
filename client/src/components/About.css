@@ -1,0 +1,47 @@
+/* ===== ABOUT ===== */
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin: 8px 0 28px;
+  white-space: pre-line; /* keeps line breaks typed in the admin panel */
+}
+
+.about-facts {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 24px;
+}
+
+.about-facts li {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  word-break: break-word;
+}
+
+.about-facts li:last-child {
+  border-bottom: none;
+}
+
+.fact-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+@media (max-width: 800px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
