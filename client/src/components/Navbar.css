@@ -60,7 +60,7 @@
     display: block;
   }
 
-  .navbar-links {
+  .navbar-links { 
     display: none;
     position: absolute;
     top: 68px;

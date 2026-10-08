@@ -1,0 +1,42 @@
+/* ===== SKILLS ===== */
+.skills {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.skill-group {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: var(--paper);
+}
+.skill-group h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--marker);
+  display: inline-block;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-chip {
+  padding: 7px 14px;
+  background: var(--white);
+  border: 1.5px solid var(--ink);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+@media (max-width: 800px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
