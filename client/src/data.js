@@ -32,3 +32,35 @@ export const skills = [
   { _id: "9", name: "VS Code", category: "Tools" },
   { _id: "10", name: "Postman", category: "Tools" },
 ];
+export const projects = [
+  {
+    _id: "1",
+    title: "StudyBuddy",
+    description:
+      "A notes-sharing app for college students. Upload notes by subject, search them, and bookmark the ones you need before exams.",
+    image: "",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
+    githubUrl: "https://github.com/",
+    liveUrl: "https://vercel.com/",
+  },
+  {
+    _id: "2",
+    title: "Weather Now",
+    description:
+      "Type any city and see the current weather and a 5-day forecast, using the OpenWeather API.",
+    image: "",
+    techStack: ["JavaScript", "HTML", "CSS", "API"],
+    githubUrl: "https://github.com/",
+    liveUrl: "",
+  },
+  {
+    _id: "3",
+    title: "Expense Tracker",
+    description:
+      "Track daily spending by category and see where your money goes each month with simple charts.",
+    image: "",
+    techStack: ["React", "CSS", "LocalStorage"],
+    githubUrl: "https://github.com/",
+    liveUrl: "https://vercel.com/",
+  },
+];
